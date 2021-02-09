@@ -39,7 +39,7 @@ function generateMediaQueryDict(css: string): MediaQueryDict {
 
 	while ((index = indexes.pop()) !== undefined) {
 		const mediaQuery: MediaQueryObject = extractMediaQueryAtIndex(css, index);
-		css = stringSplice(css, index, index + mediaQuery.length);
+		css = stringSplice(css, index, mediaQuery.length);
 		if (!mediaQueriesDict[mediaQuery.media]) {
 			mediaQueriesDict[mediaQuery.media] = "";
 		}
